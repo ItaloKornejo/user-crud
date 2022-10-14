@@ -17,12 +17,19 @@
 }
 
 .header__users button {
+  
   padding: 0rem 2rem;
   height: 50px;
   background-color: rgba(71,73,104,240);
   color: #fff;
   font-size: 1.1rem;
   border: none;
+}
+
+.header__users button:hover {
+  transform: scale(1.02);
+    filter: brightness(1.5);
+    transition: filter 100ms ease;
 }
 
 

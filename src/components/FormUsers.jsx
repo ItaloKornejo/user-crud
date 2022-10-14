@@ -25,7 +25,7 @@ const FormUsers = ({ createNewUser, updateInfo,setUpdateInfo,updateUserById,setF
 			updateUserById(updateInfo.id ,data)
 			setUpdateInfo()
 		} else {
-			createNewUser(data)	
+			createNewUser(data)
 		}
 		reset(defaultValues)
 		setFormIsClose(true)
