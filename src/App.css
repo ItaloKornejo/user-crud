@@ -1,0 +1,107 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* body{
+  padding: 0;
+  margin: 0;
+} */
+
+.header__users{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__users h1{
+  font-size: 3rem;
+}
+
+.header__users button {
+  padding: 0rem 2rem;
+  height: 50px;
+  background-color: rgba(71,73,104,240);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+}
+
+
+.content_card{
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-content: center;
+}
+.card__user{
+  width: 300px;
+  border: 2px gray solid;
+  padding: 0.7rem;
+  border-radius: 5px;
+}
+.card__user hr{
+  color: gray;
+  height: 1px;
+  background-color: gray;
+}
+
+.card__user h2{
+  text-align: center;
+}
+
+.card__user p span{
+  display: block;
+  color: gray;
+  font-weight: 700;
+}
+
+.card__buttons{
+  text-align: end;
+}
+
+.card__buttons a{
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  
+}
+
+.card__buttons i{
+  font-size: 1.5rem;
+}
+
+
+.card__buttons a:nth-child(1){
+  color: #fff;
+  background-color: red;
+  border: 2px red solid;
+}
+
+.card__buttons a:nth-child(2){
+  color: gray;
+  border: 2px gray solid;
+}
+
+
+.form-container{
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+  background-color: #0003;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.disable__form{
+  display: none;
+}
