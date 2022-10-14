@@ -55,16 +55,13 @@
     color: #fff;
     margin-top: 15px;
     cursor: pointer;
-    /* filter: brightness(0.2); */
-    transition: filter 100s ease;
+    /* transition: filter 100s ease; */
 }
 
 .form__btn:hover{
-    filter: brightness(1.7);
+    transform: scale(1.02);
+    filter: brightness(1.5);
     transition: filter 100ms ease;
-    /* background-color: red; */
-    /* color: red; */
-   /* color: red; */
 }
 
 .form__input_disabled{

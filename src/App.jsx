@@ -4,6 +4,7 @@ import './App.css'
 import axios from 'axios'
 import FormUsers from './components/FormUsers'
 import CardUsers from './components/CardUsers'
+import Pagination from './components/Pagination'
 
 const baseURL = 'https://lmz-server-production.up.railway.app/api'
 
@@ -11,6 +12,8 @@ function App() {
 	const [users, setUsers] = useState()
 	const [updateInfo, setUpdateInfo] = useState()
 	const [formIsClose,setFormIsClose] = useState(true)
+	const [currentPage,setCurrentPage] = useState(1)
+	const [postsPerPage,setPostsPerPage] = useState(9)
 
 	const getAllUsers = () => {
 		const URL = `${baseURL}/user`
@@ -61,7 +64,11 @@ function App() {
 	console.log('USERS: ', users);
 
 
+	const indexOfLastUser = currentPage * postsPerPage
+	const indexOfFirstUser = indexOfLastUser - postsPerPage
+	const currentUserPage = users?.slice(indexOfFirstUser,indexOfLastUser)
 
+	const paginate = (pageNumber) => setCurrentPage (pageNumber)
 
 	return (
 		<div className="App">
@@ -80,7 +87,7 @@ function App() {
 			</div>
 			<div className='content_card'>
 				{
-					users?.map(user => <CardUsers key={user.id}
+					currentUserPage?.map(user => <CardUsers key={user.id}
 						user={user}
 						deleteUserById={deleteUserById}
 						setUpdateInfo={setUpdateInfo}
@@ -88,7 +95,7 @@ function App() {
 					/>)
 				}
 			</div>
-
+			<Pagination  postsPerPage={postsPerPage} users={users} paginate={paginate} currentPage={currentPage}/>
 
 		</div>
 	)

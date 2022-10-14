@@ -4,10 +4,6 @@
   padding: 2rem;
 }
 
-/* body{
-  padding: 0;
-  margin: 0;
-} */
 
 .header__users{
   display: flex;
@@ -38,9 +34,10 @@
 }
 .card__user{
   width: 300px;
-  border: 2px gray solid;
+  border: 1px gray solid;
   padding: 0.7rem;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .card__user hr{
   color: gray;
@@ -82,9 +79,23 @@
   border: 2px red solid;
 }
 
+.card__buttons a:nth-child(1):hover{
+  transform: scale(1.1);
+  transition: filter 100ms ease;
+  background-color: #fff;
+  color: red;
+}
+
 .card__buttons a:nth-child(2){
   color: gray;
   border: 2px gray solid;
+}
+
+.card__buttons a:nth-child(2):hover{
+  transform: scale(1.1);
+  transition: filter 100ms ease;
+  background-color: gray;
+  color: #fff;
 }
 
 
@@ -105,3 +116,35 @@
 .disable__form{
   display: none;
 }
+
+
+.pagination{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pagination li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 100ms ease;
+
+}
+
+.pagination li a{
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pagination li:hover{
+  transform: scale(1.1);
+  transition: transform 100ms ease;
+}
+
+
