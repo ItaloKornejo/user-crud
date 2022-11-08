@@ -12,7 +12,7 @@ const CardUsers = ({ user, deleteUserById, setUpdateInfo ,setFormIsClose}) => {
 			<h2>{user?.firstname} {user?.lastname}</h2>
 			<hr />
 			<p><span>Email</span>{user?.email}</p>
-			<p><span>Birthday</span><i className='bx bx-gift'></i>{user?.birthday.slice(0, 10)}</p>
+			<p><span>Birthday</span><i className='bx bx-gift'></i>{user?.birthday?.slice(0, 10)}</p>
 			<hr />
 			<div className='card__buttons'>
 				<a onClick={() => deleteUserById(user.id)}><i className='bx bx-trash'></i></a>
