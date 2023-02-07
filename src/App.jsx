@@ -6,7 +6,7 @@ import FormUsers from './components/FormUsers'
 import CardUsers from './components/CardUsers'
 import Pagination from './components/Pagination'
 
-const baseURL = 'https://minimal-api-user.onrender.com/api'
+const baseURL = 'https://server-userscrud.symphonik.site/api'
 
 function App() {
 	const [users, setUsers] = useState()
